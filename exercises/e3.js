@@ -15,7 +15,18 @@
 
 // Your code goes here...
 
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+  // Loop through the array
+  for (let i = 0; i < arr.length; i++) {
+    // If the current item is greater than val1 and less than val2, return true
+    if (arr[i] > val1 && arr[i] < val2) {
+      return true;
+    }
+  }
 
+  // If no item is found, return false
+  return false;
+}
 
 /**
  * ====================================================
@@ -31,7 +42,32 @@
  * getValueWithConditionOne(20, 30) => 100;
  */
 
+// Named function
+function getValueWithConditionOne(num1, num2) {
+  if (num1 === 40 && num2 === 40) {
+    return num1 + num2;
+  } else {
+    return (num1 + num2) * 2;
+  }
+}
 
+// Arrow function
+const getValueWithConditionTwo = (num1, num2) => {
+  if (num1 === 40 && num2 === 40) {
+    return num1 + num2;
+  } else {
+    return (num1 + num2) * 2;
+  }
+};
+
+// Function expression with anonymous function
+const getValueWithConditionThree = function(num1, num2) {
+  if (num1 === 40 && num2 === 40) {
+    return num1 + num2;
+  } else {
+    return (num1 + num2) * 2;
+  }
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
